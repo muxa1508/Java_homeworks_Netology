@@ -3,9 +3,9 @@
 **Список задач:**
 
 A. Основы Java
-1. [Введение в программирование на Java](src/Java_basics/Java_initial/readme.md)
-2. [Структура программы](src/Java_basics/Program_structure/readme.md)
-3. [Условные операторы и циклы](src/Java_basics/Operators_and_loops/readme.md)
+1. [Введение в программирование на Java](src/Java_basics/Java_initial)
+2. [Структура программы](src/Java_basics/Program_structure)
+3. [Условные операторы и циклы](src/Java_basics/Operators_and_loops)
 4. Типы данных в Java: примитивы
 5. Типы данных в Java: объекты
 6. Структура класса
