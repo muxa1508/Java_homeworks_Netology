@@ -3,17 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>Java_homeworks_Netology</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>org.example</groupId>
-    <artifactId>Java_homeworks_Netology</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>src/Design_patterns</module>
-        <module>src/Git_and_java_basics</module>
-        <module>src/Java_basics</module>
-        <module>src/Java_core</module>
-    </modules>
+    <artifactId>Design_patterns</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
