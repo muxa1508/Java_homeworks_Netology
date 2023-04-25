@@ -5,16 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>Java_homeworks_Netology</artifactId>
+        <artifactId>Java_basics</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Java_basics</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>Java_initial</module>
-        <module>Program_structure</module>
-    </modules>
+    <artifactId>Program_structure</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
