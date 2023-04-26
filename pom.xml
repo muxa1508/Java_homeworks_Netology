@@ -13,6 +13,7 @@
         <module>src/Git_and_java_basics</module>
         <module>src/Java_basics</module>
         <module>src/Java_core</module>
+
     </modules>
 
     <properties>

@@ -5,26 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>Java_homeworks_Netology</artifactId>
+        <artifactId>Java_basics</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Java_basics</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>Java_initial</module>
-        <module>Program_structure</module>
-        <module>Operators_and_loops</module>
-        <module>Java_primitives</module>
-        <module>Java_objects</module>
-        <module>Class_structure</module>
-        <module>Massives_1</module>
-        <module>Massives_2</module>
-        <module>Access_mods</module>
-        <module>Polymorph</module>
-        <module>Abstractions_and_inrerfaces</module>
-        <module>Stacktraces</module>
-    </modules>
+    <artifactId>Java_objects</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
