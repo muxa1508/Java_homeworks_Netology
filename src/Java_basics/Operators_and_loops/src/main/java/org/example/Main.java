@@ -3,6 +3,8 @@ package org.example;
 import java.util.Scanner;
 
 public class Main {
+
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("Задача 1:");
         System.out.println("Количество дней " + check(inputYear()));
@@ -16,7 +18,7 @@ public class Main {
 
     protected static int inputYear() {
         System.out.println("Введите год в формате YYYY");
-        return new Scanner(System.in).nextInt();
+        return scanner.nextInt();
     }
 
     protected static int check(int year) {
@@ -33,7 +35,7 @@ public class Main {
 
     protected static int inputDays() {
         System.out.println("Введите количество дней:");
-        return new Scanner(System.in).nextInt();
+        return scanner.nextInt();
     }
 
     protected static void loop() {
