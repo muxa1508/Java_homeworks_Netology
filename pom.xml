@@ -13,6 +13,23 @@
         <module>src/Git_and_java_basics</module>
         <module>src/Java_basics</module>
         <module>src/Java_core</module>
+        <module>src/Git_and_java_basics/Git_init</module>
+        <module>src/Git_and_java_basics/Work_history</module>
+        <module>src/Git_and_java_basics/Generics</module>
+        <module>src/Git_and_java_basics/List</module>
+        <module>src/Git_and_java_basics/Queue</module>
+        <module>src/Git_and_java_basics/HashMap</module>
+        <module>src/Git_and_java_basics/TreeMap</module>
+        <module>src/Java_core/Lamda</module>
+        <module>src/Java_core/Stream_api</module>
+        <module>src/Java_core/Input_output</module>
+        <module>src/Java_core/Maven_gradle</module>
+        <module>src/Java_core/Files_csv_xml_json</module>
+        <module>src/Java_core/Unit_tests</module>
+        <module>src/Java_core/Mock</module>
+        <module>src/Java_core/Network_basics</module>
+        <module>src/Java_core/Http_protocol</module>
+        <module>src/Java_core/JVM_VisualVM</module>
 
     </modules>
 
