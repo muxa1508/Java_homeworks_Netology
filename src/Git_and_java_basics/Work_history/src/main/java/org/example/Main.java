@@ -6,5 +6,6 @@ public class Main {
         SalesManager salesManager = new SalesManager(new int[]{100, 10, 20, 300, 15});
 
         System.out.println(salesManager.max());
+        System.out.println(salesManager.croppedAverage());
     }
 }
