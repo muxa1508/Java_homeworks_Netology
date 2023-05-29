@@ -30,6 +30,10 @@
         <module>src/Java_core/Network_basics</module>
         <module>src/Java_core/Http_protocol</module>
         <module>src/Java_core/JVM_VisualVM</module>
+        <module>src/Design_patterns/Init_patterns</module>
+        <module>src/Design_patterns/Structure_patterns</module>
+        <module>src/Design_patterns/Behavior_patterns</module>
+        <module>src/Design_patterns/SOLID</module>
 
     </modules>
 

@@ -17,32 +17,31 @@
 12. [Исключения, Stacktrace](src/Java_basics/Stacktraces)
 
 ### B. Основы Git и Java
-1. Внедрение системы контроля версий
-2. История работы и ветки
-3. Командная работа
-4. Generics в коллекциях и методах
-5. Коллекции List
-6. Коллекции Queue
-7. Коллекции HashSet и HashMap
-8. Коллекции TreeSet и TreeMap
+1. [Внедрение системы контроля версий](src/Git_and_java_basics/Git_init)
+2. [История работы и ветки](src/Git_and_java_basics/Work_history)
+3. [Generics в коллекциях и методах](src/Git_and_java_basics/Generics)
+4. [Коллекции List](src/Git_and_java_basics/List)
+5. [Коллекции Queue](src/Git_and_java_basics/Queue)
+6. [Коллекции HashSet и HashMap](src/Git_and_java_basics/HashMap)
+7. [Коллекции TreeSet и TreeMap](src/Git_and_java_basics/TreeMap)
 
 ### C. Java Core
-1. Лямбда-выражения и функциональные интерфейсы
-2. Stream API. Потоки, повторные вызовы, основные методы
-3. Потоки ввода-вывода. Работа с файлами. Сериализация.
-4. Сборка проектов. Maven и Gradle
-5. Работа с файлами csv, xml, json
-6. Тестирование кода и Unit-тесты
-7. Mockito. Мокитирование вызовов, Mock
-8. Основы работы с сетью. Модель OSI, TCP, UDP
-9. Протокол HTTP. Вызов удаленных серверов
-10. JVM. Организация памяти, сборщики мусора, VisualVM
+1. [Лямбда-выражения и функциональные интерфейсы](src/Java_core/Lamda)
+2. [Stream API. Потоки, повторные вызовы, основные методы](src/Java_core/Stream_api)
+3. [Потоки ввода-вывода. Работа с файлами. Сериализация.](src/Java_core/Input_output)
+4. [Сборка проектов. Maven и Gradle](src/Java_core/Maven_gradle)
+5. [Работа с файлами csv, xml, json](src/Java_core/Files_csv_xml_json)
+6. [Тестирование кода и Unit-тесты](src/Java_core/Unit_tests)
+7. [Mockito. Мокитирование вызовов, Mock](src/Java_core/Mock)
+8. [Основы работы с сетью. Модель OSI, TCP, UDP](src/Java_core/Network_basics)
+9. [Протокол HTTP. Вызов удаленных серверов](src/Java_core/Http_protocol)
+10. [JVM. Организация памяти, сборщики мусора, VisualVM](src/Java_core/JVM_VisualVM)
 
 ### D. Шаблоны проектирования
-1. Порождающие шаблоны. Builder, Singleton, Factory method, Abstract factory, Prototype
-2. Структурные шаблоны. Proxy, Decorator, Adapter
-3. Поведенческие шаблоны. Command, Iterator, Observer, Chain of responsibility
-4. Свойства хорошего кода и принцип SOLID
+1. [Порождающие шаблоны. Builder, Singleton, Factory method, Abstract factory, Prototype](src/Design_patterns/Init_patterns)
+2. [Структурные шаблоны. Proxy, Decorator, Adapter](src/Design_patterns/Structure_patterns)
+3. [Поведенческие шаблоны. Command, Iterator, Observer, Chain of responsibility](src/Design_patterns/Behavior_patterns)
+4. [Свойства хорошего кода и принцип SOLID](src/Design_patterns/SOLID)
 
 
 
