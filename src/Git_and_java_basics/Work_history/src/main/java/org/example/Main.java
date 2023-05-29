@@ -2,6 +2,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        SalesManager salesManager = new SalesManager(new int[]{100, 10, 20, 300, 15});
+
+        System.out.println(salesManager.max());
     }
 }
