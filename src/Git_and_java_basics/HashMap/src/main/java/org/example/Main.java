@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.Task1.CharChecker;
+import org.example.Task2.WordsChecker;
+
 public class Main {
 
     static String text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \n" +
@@ -13,9 +16,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Task1 task1 = new Task1();
-        task1.charCheck(text);
+        CharChecker charChecker = new CharChecker();
+        charChecker.charCheck(text);
 
+        System.out.println();
 
+        WordsChecker wordsChecker = new WordsChecker(text);
+        System.out.println(wordsChecker.hasWord("Lorem ipsum"));
     }
 }

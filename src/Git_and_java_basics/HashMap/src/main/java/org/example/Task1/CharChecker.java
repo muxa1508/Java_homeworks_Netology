@@ -1,9 +1,9 @@
-package org.example;
+package org.example.Task1;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Task1 {
+public class CharChecker {
 
     public void charCheck(String text) {
 
