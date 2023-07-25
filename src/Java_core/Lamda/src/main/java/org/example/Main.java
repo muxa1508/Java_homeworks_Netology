@@ -3,6 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Predicate;
 
 
 public class Main {
@@ -21,6 +22,15 @@ public class Main {
 
 
         Collections.sort(list, new PersonComparator(2));
+
+        list.removeIf(new Predicate<Person>() {
+            @Override
+            public boolean test(Person person) {
+                if (person.getAge() < 18) {
+                    return true;
+                } else return false;
+            }
+        });
 
         System.out.println(list);
     }
