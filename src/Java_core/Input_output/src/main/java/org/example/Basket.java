@@ -1,13 +1,11 @@
 package org.example;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class Basket {
+public class Basket implements Serializable{
 
     String[] products;
     long[] prices;
@@ -69,6 +67,20 @@ public class Basket {
             int[] inAmountInt = Arrays.stream(inAmounts).mapToInt(Integer::parseInt).toArray();
 
             return new Basket(inProducts, inPricesLong, inAmountInt);
+        }
+    }
+
+    public void saveBin(File file) throws IOException {
+        try (FileOutputStream fileOutputStream = new FileOutputStream(file);
+             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);) {
+            objectOutputStream.writeObject(new Basket(this.products, this.prices, this.amounts));
+        }
+    }
+
+    public static Basket loadFromBinFile(File file) throws IOException, ClassNotFoundException {
+        try (FileInputStream fileInputStream = new FileInputStream(file);
+             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);) {
+            return (Basket) objectInputStream.readObject();
         }
     }
 

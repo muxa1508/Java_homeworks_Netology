@@ -12,12 +12,19 @@ public class Main {
     static long[] prices = {25, 60, 100, 20};
 
     static File textFile = new File("src/Java_core/Input_output/src/main/java/org/example/basket.txt");
+    static File file = new File("src/Java_core/Input_output/src/main/java/org/example/basket.bin");
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
         Basket basket;
-        if (textFile.exists()) {
-            basket = Basket.loadFromTxtFile(textFile);
+//        if (textFile.exists()) {
+//            basket = Basket.loadFromTxtFile(textFile);
+//        } else {
+//            basket = new Basket(products, prices);
+//        }
+
+        if (file.exists()) {
+            basket = Basket.loadFromBinFile(file);
         } else {
             basket = new Basket(products, prices);
         }
@@ -36,7 +43,8 @@ public class Main {
             int amount = Integer.parseInt(input.split(" ")[1]);
 
             basket.addToCart(productNum, amount);
-            basket.saveTxt(textFile);
+//            basket.saveTxt(textFile);
+            basket.saveBin(file);
         }
     }
 }
