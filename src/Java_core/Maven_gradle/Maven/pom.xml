@@ -5,15 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>Java_homeworks_Netology</artifactId>
+        <artifactId>Maven_gradle</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>Maven_gradle</artifactId>
+    <artifactId>Maven</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>Maven</module>
+        <module>api-maven</module>
+        <module>db-maven</module>
+        <module>service-maven</module>
     </modules>
 
     <properties>
