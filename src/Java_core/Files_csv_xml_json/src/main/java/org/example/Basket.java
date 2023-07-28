@@ -58,6 +58,7 @@ public class Basket {
         }
     }
 
+
     public static Basket loadFromTxtFile(File textFile) throws IOException {
         try (Scanner in = new Scanner(textFile)) {
             String[] inProducts = in.nextLine().split(" ");

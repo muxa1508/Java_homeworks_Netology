@@ -11,13 +11,15 @@ public class Main {
     static String[] products = {"Хлеб", "Молоко", "Масло", "Крупа"};
     static long[] prices = {25, 60, 100, 20};
 
-    static File textFile = new File("src/Java_core/Input_output/src/main/java/org/example/basket.txt");
-
+//    static File textFile = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/basket.txt");
+    static File textFileCSV = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/basket.csv");
+    static File textFileJson = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/basket.json");
 
     public static void main(String[] args) throws IOException {
+        ClientLog log = new ClientLog();
         Basket basket;
-        if (textFile.exists()) {
-            basket = Basket.loadFromTxtFile(textFile);
+        if (textFileJson.exists()) {
+            basket = Basket.loadFromTxtFile(textFileJson);
         } else {
             basket = new Basket(products, prices);
         }
@@ -34,9 +36,10 @@ public class Main {
             }
             int productNum = Integer.parseInt(input.split(" ")[0]);
             int amount = Integer.parseInt(input.split(" ")[1]);
-
+            log.log(productNum, amount);
             basket.addToCart(productNum, amount);
-            basket.saveTxt(textFile);
+            basket.saveTxt(textFileJson);
+            log.exportAsCSV(textFileCSV);
         }
     }
 }
