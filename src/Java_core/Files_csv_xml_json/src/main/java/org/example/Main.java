@@ -11,15 +11,26 @@ public class Main {
     static String[] products = {"Хлеб", "Молоко", "Масло", "Крупа"};
     static long[] prices = {25, 60, 100, 20};
 
-//    static File textFile = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/basket.txt");
-    static File textFileCSV = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/basket.csv");
-    static File textFileJson = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/basket.json");
+    //    static File textFile = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/basket.txt");
+//    static File textFileCSV = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/basket.csv");
+//    static File textFileJson = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/basket.json");
+    static File settingsFile = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/shop.xml");
 
     public static void main(String[] args) throws IOException {
+
+
         ClientLog log = new ClientLog();
         Basket basket;
-        if (textFileJson.exists()) {
-            basket = Basket.loadFromTxtFile(textFileJson);
+        XMLSettings xmlSettings = new XMLSettings();
+        xmlSettings.checkSettingsXML(settingsFile);
+
+        if (xmlSettings.isLoadEnabled()) {
+            File loadFile = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/" + xmlSettings.getLoadFileName());
+            if (loadFile.exists()) {
+                basket = Basket.loadFromTxtFile(loadFile);
+            } else {
+                basket = new Basket(products, prices);
+            }
         } else {
             basket = new Basket(products, prices);
         }
@@ -38,8 +49,16 @@ public class Main {
             int amount = Integer.parseInt(input.split(" ")[1]);
             log.log(productNum, amount);
             basket.addToCart(productNum, amount);
-            basket.saveTxt(textFileJson);
-            log.exportAsCSV(textFileCSV);
+
+            File saveFile = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/" + xmlSettings.getSaveFileName());
+            File logFile = new File("src/Java_core/Files_csv_xml_json/src/main/java/org/example/" + xmlSettings.getLogFileName());
+
+            if (xmlSettings.isSaveEnabled()) {
+                basket.saveTxt(saveFile);
+            }
+            if (xmlSettings.isLogEnabled()) {
+                log.exportAsCSV(logFile);
+            }
         }
     }
 }
