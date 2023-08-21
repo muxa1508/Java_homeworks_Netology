@@ -7,24 +7,41 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server extends  Thread{
+public class Server extends Thread {
 
     int port;
+
+    String lastCity = "???";
+
     public Server(int port) {
         this.port = port;
     }
 
-    public  void run() {
+    public void run() {
         try (ServerSocket serverSocket = new ServerSocket(port);) {
-            try (Socket clientSocket = serverSocket.accept();
-                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-                 BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            ) {
+            while (true) {
+                try (Socket socket = serverSocket.accept();
+                     BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                     PrintWriter out = new PrintWriter(socket.getOutputStream(), true);) {
 
-                System.out.println("New connection accepted");
-                final String name = in.readLine();
-                out.println(String.format("Hi %s, you port is %d", name, clientSocket.getPort()));
-
+                    System.out.println("New connection accepted");
+                    out.println(lastCity);
+                    String input = in.readLine();
+                    if (lastCity.equals("???")) {
+                        lastCity = input;
+                        out.println("OK");
+                    } else {
+                        String firstChar = input.toLowerCase().split("")[0];
+                        String[] lastCityCharMassive = lastCity.toLowerCase().split("");
+                        String lastChar = lastCityCharMassive[lastCityCharMassive.length - 1];
+                        if (firstChar.equals(lastChar)) {
+                            lastCity = input;
+                            out.println("OK");
+                        } else {
+                            out.println("NOT OK");
+                        }
+                    }
+                }
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
