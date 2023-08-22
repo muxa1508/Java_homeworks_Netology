@@ -1,4 +1,4 @@
-### Задание 1
+### Задание
 По адресу https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats находится список фактов о кошках. 
 Наша задача - сделать запрос к этому ресурсу и отфильтровать факты, за которые никто не проголосовал (поле upvotes). 
 Формат каждой записи следующий:
@@ -47,7 +47,7 @@ CloseableHttpClient httpClient = HttpClientBuilder.create()
 ```
 Добавьте объект запроса 
 `HttpGet request = new HttpGet("https://raw.githubusercontent.com/netology-code/jd-homeworks/master/http/task1/cats")` 
-и вызовите удаленный сервис `CloseableHttpResponse response = httpClient.execute(request)`;
+и вызовите удаленный сервис `CloseableHttpResponse response = httpClient.execute(request);`
 
 Добавьте в `pom.xml` библиотеку для работы с json
 Пример:
